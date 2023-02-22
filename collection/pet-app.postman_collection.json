@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "3baf4af7-2c5f-4085-8ec4-8e45ec95de7e",
+		"name": "pet-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3078062"
+	},
+	"item": [
+		{
+			"name": "Create Pet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"breed\": \"Beagle\",\r\n  \"title\": \"pet title\",\r\n  \"type_code\": \"\",\r\n  \"type\": \"cat\",\r\n  \"image\": \"\",\r\n  \"gender\": \"male\",\r\n  \"rating\": 3,\r\n  \"price\": {\r\n    \"amount\": 3422,\r\n    \"currencyCode\": \"INR\"\r\n  },\r\n  \"breeder\": {\r\n    \"name\": \"Alfard\",\r\n    \"code\": \"B001\",\r\n    \"location\": {\r\n      \"name\": \"Bangkok\",\r\n      \"longitude\": \"\",\r\n      \"latitude\": \"\",\r\n      \"address\": {\r\n        \"street\": \"\",\r\n        \"pin\": \"\"\r\n      }\r\n    }\r\n  },\r\n  \"location\": {\r\n    \"name\": \"Bangkok\",\r\n    \"longitude\": \"\",\r\n    \"latitude\": \"\",\r\n    \"address\": {\r\n      \"street\": \"\",\r\n      \"pin\": \"\"\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{onboarding_host}}/pet",
+					"host": [
+						"{{onboarding_host}}"
+					],
+					"path": [
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Pets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{onboarding_host}}/pet",
+					"host": [
+						"{{onboarding_host}}"
+					],
+					"path": [
+						"pet"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
