@@ -1,1 +1,1 @@
-# pet-app
+# pet-app-collection
