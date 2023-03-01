@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "3baf4af7-2c5f-4085-8ec4-8e45ec95de7e",
+		"name": "pet-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3078062"
+	},
+	"item": [
+		{
+			"name": "Create Pet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"breed\": \"Lab\",\r\n    \"title\": \"Mini\",\r\n    \"type_code\": \"\",\r\n    \"type\": \"dog\",\r\n    \"image\": \"\",\r\n    \"gender\": \"female\",\r\n    \"rating\": 3,\r\n    \"price\": {\r\n        \"amount\": 7001,\r\n        \"currencyCode\": \"INR\"\r\n    },\r\n    \"breeder\": {\r\n        \"reviews\": [\r\n            {\r\n                \"comment\": \"Hello\",\r\n                \"likeCount\": 1,\r\n                \"disLikeCount\": 2\r\n            }\r\n        ],\r\n        \"name\": \"Alfard\",\r\n        \"code\": \"B001\",\r\n        \"location\": {\r\n            \"name\": \"Pattaya\",\r\n            \"longitude\": \"\",\r\n            \"latitude\": \"\",\r\n            \"address\": {\r\n                \"street\": \"\",\r\n                \"pin\": \"\"\r\n            }\r\n        }\r\n    },\r\n    \"location\": {\r\n        \"name\": \"Kanchanaburi\",\r\n        \"longitude\": \"\",\r\n        \"latitude\": \"\",\r\n        \"address\": {\r\n            \"street\": \"\",\r\n            \"pin\": \"\"\r\n        }\r\n    },\r\n    \"reviews\": [\r\n        {\r\n            \"comment\": \"Hi\",\r\n            \"likeCount\": 1,\r\n            \"disLikeCount\": 2\r\n        }\r\n    ],\r\n    \"documents\": [\r\n        {\r\n            \"name\": \"Health certificate\",\r\n            \"validUntil\": \"2023-01-28T16:44:03.520Z\"\r\n        },\r\n        {\r\n            \"name\": \"Vaccine passport\",\r\n            \"validUntil\": \"2023-01-29T16:44:03.520Z\"\r\n        }\r\n    ]\r\n    ,\"images\": [\r\n        {\r\n            \r\n            \"path\": \"some/path\",\r\n            \"file\": \"image1.jpg\",\r\n            \"cdn\":\"host1\"\r\n        },\r\n        {\r\n            \"path\": \"some/path\",\r\n            \"file\": \"image2.jpg\",\r\n            \"cdn\":\"host2\"\r\n\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{onboarding_host}}/pet",
+					"host": [
+						"{{onboarding_host}}"
+					],
+					"path": [
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchPet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"priceFilter\":{\r\n        \"from\":100,\r\n        \"to\":200\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{onboarding_host}}/pet/search",
+					"host": [
+						"{{onboarding_host}}"
+					],
+					"path": [
+						"pet",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Pets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{onboarding_host}}/pet",
+					"host": [
+						"{{onboarding_host}}"
+					],
+					"path": [
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Pets by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{onboarding_host}}/pet/PET_c5e78b7c",
+					"host": [
+						"{{onboarding_host}}"
+					],
+					"path": [
+						"pet",
+						"PET_c5e78b7c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Locations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{onboarding_host}}/location",
+					"host": [
+						"{{onboarding_host}}"
+					],
+					"path": [
+						"location"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
